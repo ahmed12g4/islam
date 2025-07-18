@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>إهداء إلى روح المغفور له إسلام جمال العطار</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e6f3ec;
+      direction: rtl;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #d1f5d3;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #14532d;
+      margin-bottom: 25px;
+      font-size: 26px;
+    }
+
+    button {
+      background-color: #16a34a;
+      color: white;
+      padding: 14px 22px;
+      margin: 12px 6px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 18px;
+      width: 45%;
+    }
+
+    button:hover {
+      background-color: #15803d;
+      transform: scale(1.05);
+    }
+
+    .output {
+      margin-top: 20px;
+      background-color: #f0fdf4;
+      padding: 18px;
+      border-radius: 10px;
+      color: #065f46;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 2;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #064e3b;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      button {
+        width: 100%;
+        margin: 12px 0;
+        font-size: 20px;
+      }
+
+      .output {
+        font-size: 20px;
+      }
+
+      .footer {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="IMG-20250710-WA0005.jpg" alt="Islam Photo">
+    <h2>إهداء إلى روح المغفور له بإذن الله<br>إسلام جمال العطار</h2>
+
+    <button onclick="showDua()">اقرأ دعاء</button>
+    <button onclick="showTasbeeh()">تسبيح</button>
+
+    <div id="output" class="output"></div>
+
+    <div class="footer">لا تنسوه من دعائكم ❤️</div>
+  </div>
+
+  <script>
+    const ad3ya = [
+      "اللهم اغفر له وارحمه، وعافه واعفُ عنه، وأكرم نزله، ووسّع مدخله.",
+      "اللهم اجعل قبره روضة من رياض الجنة.",
+      "اللهم نقه من الذنوب والخطايا كما ينقى الثوب الأبيض من الدنس.",
+      "اللهم اجعل أعماله الصالحة نورًا له في قبره.",
+      "اللهم اجعل مثواه الجنة بلا سابقة عذاب ولا مناقشة حساب.",
+      "اللهم آنسه في وحدته، وكن له في قبره مؤنسًا ورفيقًا."
+    ];
+
+    const azkar = [
+      "سبحان الله",
+      "الحمد لله",
+      "لا إله إلا الله",
+      "الله أكبر",
+      "لا حول ولا قوة إلا بالله",
+      "سبحان الله وبحمده، سبحان الله العظيم",
+      "أستغفر الله العظيم وأتوب إليه",
+      "اللهم صل وسلم على نبينا محمد"
+    ];
+
+    function showDua() {
+      const randomDua = ad3ya[Math.floor(Math.random() * ad3ya.length)];
+      document.getElementById('output').textContent = randomDua;
+    }
+
+    function showTasbeeh() {
+      let content = azkar.map(z => `• ${z}`).join("\n");
+      document.getElementById('output').textContent = content;
+    }
+  </script>
+
+</body>
+</html>
